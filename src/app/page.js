@@ -1,6 +1,7 @@
 'use client';
 import {otziv} from '@/js/otziv';
 import 'bootstrap/dist/css/bootstrap.css'
+import {MyVerticallyCenteredModal} from '@/components/MyVerticallyCenteredModal'
 // import '../js/index'
 // import fontsize from "@/js";
 // import {toggle} from '@/js/otzivarr'
@@ -60,6 +61,7 @@ export default function Home() {
         }
     }, [size]);
     const [opened, setOpened] = useState(false)
+    const [modalShow, setModalShow] = useState(false);
     const arrowHandler = () => {
         // while (document.querySelector('.otziv-array').firstChild) {
         //     console.log(document.querySelector('.otziv-array').firstChild)
@@ -71,6 +73,10 @@ export default function Home() {
 
     return (
         <>
+            <MyVerticallyCenteredModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
             <header className='header'>
                 <div className="container header-line d-flex justify-content-end">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -101,7 +107,8 @@ export default function Home() {
                     <p className="no-avans text-end">Работаем <strong>БЕЗ ПРЕДОПЛАТЫ И АВАНСА</strong><br/>
                         Выезд мастера на замер <strong>БЕСПЛАТНО</strong>
                     </p>
-                    <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" className="callme ms-auto">
+                    <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" style={{zIndex: '1001'}} className="callme ms-auto"
+                            onClick={() => setModalShow(true)}>
                         Отправить заявку
                     </button>
                 </div>
@@ -193,7 +200,8 @@ export default function Home() {
                 <p className="pt-5 skidka"> Оставьте заявку и
                     получите скидку</p>
                 <p className="mt-3 skidka"> 10% на услуги</p>
-                <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" className="my-3 skidka-button">Отправить
+                <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" className="my-3 skidka-button"
+                        onClick={() => setModalShow(true)}>Отправить
                     заявку
                 </button>
 
@@ -203,19 +211,21 @@ export default function Home() {
                     наших
                     заказчиков</p>
                 <Row className="otziv-array m-5">
-                    {otziv.map((otz,index) => {
-                        if (!opened && index > 5) {
-                            return ''
-                        } else {return (
-                            <Col key={otz.otziv} className='col-lg-4 col-md-6 col-12 text-start my-3'>
-                                <h4 className="fs-lg-4, fs-5">{otz.name}</h4>
-                                <div className="stars d-flex">{[...Array(otz.stars).keys()].map(star =>
-                                    <div key={star} id="star"></div>
-                                )
-                                }
-                                </div>
-                                <div className="fs-lg-6 fs-6 otziv">{otz.otziv}</div>
-                            </Col>)}
+                    {otziv.map((otz, index) => {
+                            if (!opened && index > 5) {
+                                return ''
+                            } else {
+                                return (
+                                    <Col key={otz.otziv} className='col-lg-4 col-md-6 col-12 text-start my-3'>
+                                        <h4 className="fs-lg-4, fs-5">{otz.name}</h4>
+                                        <div className="stars d-flex">{[...Array(otz.stars).keys()].map(star =>
+                                            <div key={star} id="star"></div>
+                                        )
+                                        }
+                                        </div>
+                                        <div className="fs-lg-6 fs-6 otziv">{otz.otziv}</div>
+                                    </Col>)
+                            }
                         }
                     )}
 
