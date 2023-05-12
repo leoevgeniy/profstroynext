@@ -3,19 +3,35 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "preview-email": "email dev",
     "dev": "next dev",
+    "optim": "next-image-export-optimizer",
     "build": "next build",
     "start": "next start",
+    "export": "next build && next export && next-image-export-optimizer",
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-email/container": "0.0.8",
+    "@react-email/html": "0.0.4",
+    "@react-email/section": "0.0.9",
+    "@react-email/text": "0.0.5",
     "bootstrap": "^5.2.3",
+    "dgram": "^1.0.1",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
+    "fs": "^0.0.1-security",
     "next": "13.4.2",
+    "next-image-export-optimizer": "^1.6.1",
+    "nodemailer": "^6.9.2",
     "react": "18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "18.2.0",
-    "sass": "^1.62.1"
+    "react-email": "1.9.3",
+    "sass": "^1.62.1",
+    "setimmediate": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.7"
   }
 }

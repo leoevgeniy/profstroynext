@@ -1,7 +1,19 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-
+import { render } from "@react-email/render";
+import WelcomeTemplate from "../../emails/WelcomeTemplate";
+import { sendEmail } from "../../emails/email";
 export function MyVerticallyCenteredModal(props) {
+    const callBack = async () => {
+        await sendEmail({
+            to: "leoevgeniy@gmail.com",
+            subject: "Welcome to NextAPI",
+            html: render(WelcomeTemplate()),
+        });
+
+        return res.status(200).json({ message: "Email sent successfully" })
+
+    }
     return (
         <Modal
             {...props}
@@ -23,7 +35,7 @@ export function MyVerticallyCenteredModal(props) {
                 </p>
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={props.onHide}>Close</Button>
+                <Button onClick={callBack}>Close</Button>
             </Modal.Footer>
         </Modal>
     );

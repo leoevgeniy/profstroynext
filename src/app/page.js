@@ -2,10 +2,12 @@
 import {otziv} from '@/js/otziv';
 import 'bootstrap/dist/css/bootstrap.css'
 import {MyVerticallyCenteredModal} from '@/components/MyVerticallyCenteredModal'
+import 'setimmediate'
 // import '../js/index'
 // import fontsize from "@/js";
 // import {toggle} from '@/js/otzivarr'
 import Image from "next/image";
+import ExportedImage  from "next-image-export-optimizer";
 import brigadatitle from '@/images/brigadatitle.jpg'
 import location from '@/images/location.jpg'
 import mainimg from '@/images/mainimg.png'
@@ -71,6 +73,7 @@ export default function Home() {
         const arrow = document.querySelector('.arrow-4').classList.toggle('open')
     }
 
+
     return (
         <>
             <MyVerticallyCenteredModal
@@ -96,14 +99,14 @@ export default function Home() {
 
             <main className="ratio ratio-1x1 container main">
                 <div className="title d-flex flex-column justify-content-start">
-                    <Image layout='responsive' width={titleWidth} src={brigadatitle} alt="Стрительная бригада"
+                    <ExportedImage layout='responsive' src={brigadatitle} alt="Стрительная бригада"
                            className="brigada-title"/>
 
-                    <Image layout='responsive' width={titleWidth} src={location}
+                    <ExportedImage layout='responsive' src={location}
                            alt="Работаем по Ульяновску и Ульяновской области"
                            className="location-title"/>
 
-                    <Image layout='responsive' width={titleWidth} src={mainimg} alt="Работаем командой"/>
+                    <ExportedImage layout='responsive' src={mainimg} alt="Работаем командой"/>
                     <p className="no-avans text-end">Работаем <strong>БЕЗ ПРЕДОПЛАТЫ И АВАНСА</strong><br/>
                         Выезд мастера на замер <strong>БЕСПЛАТНО</strong>
                     </p>
@@ -119,7 +122,7 @@ export default function Home() {
                     </p>
                     <div className="d-flex first-line">
                         <div className="item">
-                            <Image layout='responsive' src={bani} className="" alt='Строим бани, хозблоки'/>
+                            <ExportedImage layout='responsive' placeholder="empty" src={bani} className="" alt='Строим бани, хозблоки'/>
                             <div className="info d-flex">
                                 <div className="pixel my-auto"></div>
                                 <span>БАНИ</span>
@@ -130,7 +133,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="item">
-                            <Image layout='responsive' src={besedki} alt='Строим беседки, веранды, террасы'
+                            <ExportedImage layout='responsive' placeholder="empty" src={besedki} alt='Строим беседки, веранды, террасы'
                                    className=""/>
                             <div className="info d-flex">
                                 <div className="pixel my-auto"></div>
@@ -149,7 +152,7 @@ export default function Home() {
                     </div>
                     <div className="d-flex second-line ">
                         <div className="item">
-                            <Image layout='responsive' src={zabor} alt='Строим заборы, перегородки' className="bani"/>
+                            <ExportedImage layout='responsive' placeholder="empty" src={zabor} alt='Строим заборы, перегородки' className="bani"/>
                             <div className="info d-flex">
                                 <div className="pixel my-auto"></div>
                                 <span>ЗАБОРЫ</span>
@@ -160,7 +163,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="item">
-                            <Image layout='responsive' src={roof} alt='устанавливаем сайдинг, крыши, окна'
+                            <ExportedImage layout='responsive' placeholder="empty" src={roof} alt='устанавливаем сайдинг, крыши, окна'
                                    className="bani"/>
                             <div className="info d-flex">
                                 <div className="pixel my-auto"></div>
@@ -176,7 +179,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="item">
-                            <Image layout='responsive' src={road} alt='Дорожки, стяжки' className=""/>
+                            <ExportedImage layout='responsive' placeholder="empty" src={road} alt='Дорожки, стяжки' className=""/>
                             <div className="info d-flex">
                                 <div className="pixel my-auto"></div>
                                 <span>ДОРОЖКИ</span>
@@ -294,4 +297,8 @@ export default function Home() {
 
         </>
     )
+}
+export function getStaticProps() {
+    fs
+    return { props: { msg: 'hello world' } }
 }

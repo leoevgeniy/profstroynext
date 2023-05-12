@@ -7,7 +7,7 @@ export default function fontsize() {
 
     phone.forEach(pho => {
         const computedStyle = getComputedStyle(pho);
-        const fs = pho.parentElement.offsetWidth > 719 ? pho.parentElement.offsetWidth * 0.025 : pho.parentElement.offsetWidth * 0.05
+        const fs = pho.parentElement.offsetWidth > 719 ? pho.parentElement.offsetWidth * 0.025 : pho.parentElement.offsetWidth * 0.04
         pho.style.setProperty('font-size', String(fs + 'px'))
         pho.style.setProperty('padding-left', String(pho.parentElement.offsetWidth * 0.02 + 'px'))
         pho.style.setProperty('padding-right', String(pho.parentElement.offsetWidth * 0.02 + 'px'))
@@ -66,15 +66,16 @@ export default function fontsize() {
         ski.style.setProperty('font-size', String(ski.parentElement.offsetWidth * 0.05 + 'px'))
     })
     const footertitle = document.querySelector('footer .title')
-    footertitle.style.setProperty('font-size', String(footertitle.parentElement.offsetWidth * 0.02 + 'px'))
+    footertitle.style.setProperty('font-size', String(footertitle.parentElement.offsetWidth * 0.025 + 'px'))
     const contactstitle = document.querySelectorAll('footer .p-title')
     contactstitle.forEach(title => {
         title.style.setProperty('font-size', String( document.querySelector('footer').offsetWidth * 0.03 + 'px'))
 
     })
+    const computedStyle = getComputedStyle(contactstitle[0]);
     const contactsp = document.querySelectorAll('footer .p-footer')
     contactsp.forEach(title => {
-        title.style.setProperty('font-size', String(contactstitle[0].offsetWidth * 0.1 + 'px'))
+        title.style.setProperty('font-size', String(Number(computedStyle.fontSize.split('px')[0])-4)+ 'px')
 
     })
 
