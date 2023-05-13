@@ -4,11 +4,14 @@
 
 export default function fontsize() {
     let phone = document.querySelectorAll('.header .phone')
-
+    // const headerLine = document.querySelector('.header .header-line')
+    // const header = document.querySelector('.header');
+    // console.log(header.offsetWidth)
+    // headerLine.style.setProperty('height', String(header.offsetWidth * 0.03) + 'px')
     phone.forEach(pho => {
         const computedStyle = getComputedStyle(pho);
-        const fs = pho.parentElement.offsetWidth > 719 ? pho.parentElement.offsetWidth * 0.025 : pho.parentElement.offsetWidth * 0.04
-        pho.style.setProperty('font-size', String(fs + 'px'))
+        const fs = pho.parentElement.offsetWidth > 719 ? pho.parentElement.offsetHeight * 0.7 : pho.parentElement.offsetHeight * 0.7
+        // pho.style.setProperty('font-size', String(fs + 'px'))
         pho.style.setProperty('padding-left', String(pho.parentElement.offsetWidth * 0.02 + 'px'))
         pho.style.setProperty('padding-right', String(pho.parentElement.offsetWidth * 0.02 + 'px'))
         pho.style.paddingRight = pho.parentElement.offsetWidth * 0.01
@@ -50,34 +53,35 @@ export default function fontsize() {
 
         })
     })
-    let button = document.querySelector('.callme');
-    button.style.setProperty('margin-top', String(noavansblock.offsetWidth * 0.1 + 'px'))
-    button.style.setProperty('width', String(noavansblock.offsetWidth * 0.52 + 'px'))
-    button.style.setProperty('height', String(noavansblock.offsetWidth * 0.14 + 'px'))
-    button.style.setProperty('font-size', String(button.offsetWidth * 0.07 + 'px'))
+    // let button = document.querySelector('.callme');
+    // button.style.setProperty('margin-top', String(noavansblock.offsetWidth * 0.1 + 'px'))
+    // button.style.setProperty('width', String(noavansblock.offsetWidth * 0.52 + 'px'))
+    // button.style.setProperty('height', String(noavansblock.offsetWidth * 0.14 + 'px'))
+    // button.style.setProperty('font-size', String(button.offsetWidth * 0.07 + 'px'))
     // button.style.setProperty('right', String(button.offsetWidth * 0.007 + 'px'))
-    let skidkabutton = document.querySelector('.skidka-button');
-    skidkabutton.style.setProperty('margin-top', String(noavansblock.offsetWidth * 0.2 + 'px'))
-    skidkabutton.style.setProperty('width', String(noavansblock.offsetWidth * 0.54 + 'px'))
-    skidkabutton.style.setProperty('height', String(noavansblock.offsetWidth * 0.14 + 'px'))
-    skidkabutton.style.setProperty('font-size', String(button.offsetWidth * 0.07 + 'px'))
+    // let skidkabutton = document.querySelector('.skidka-button');
+    // skidkabutton.style.setProperty('margin-top', String(noavansblock.offsetWidth * 0.2 + 'px'))
+    // skidkabutton.style.setProperty('width', String(noavansblock.offsetWidth * 0.54 + 'px'))
+    // skidkabutton.style.setProperty('height', String(noavansblock.offsetWidth * 0.14 + 'px'))
+    // skidkabutton.style.setProperty('font-size', String(noavansblock.offsetWidth * 0.14 + 'px'))
+    // skidkabutton.style.setProperty('font-size', String(button.offsetWidth * 0.07 + 'px'))
     let skidka = document.querySelectorAll('.skidka')
     skidka.forEach(ski => {
         ski.style.setProperty('font-size', String(ski.parentElement.offsetWidth * 0.05 + 'px'))
     })
-    const footertitle = document.querySelector('footer .title')
-    footertitle.style.setProperty('font-size', String(footertitle.parentElement.offsetWidth * 0.025 + 'px'))
-    const contactstitle = document.querySelectorAll('footer .p-title')
-    contactstitle.forEach(title => {
-        title.style.setProperty('font-size', String( document.querySelector('footer').offsetWidth * 0.03 + 'px'))
-
-    })
-    const computedStyle = getComputedStyle(contactstitle[0]);
-    const contactsp = document.querySelectorAll('footer .p-footer')
-    contactsp.forEach(title => {
-        title.style.setProperty('font-size', String(Number(computedStyle.fontSize.split('px')[0])-4)+ 'px')
-
-    })
+    // const footertitle = document.querySelector('footer .title')
+    // footertitle.style.setProperty('font-size', String(footertitle.parentElement.offsetWidth * 0.025 + 'px'))
+    // const contactstitle = document.querySelectorAll('footer .p-title')
+    // contactstitle.forEach(title => {
+    //     title.style.setProperty('font-size', String(String(Number(getComputedStyle(footertitle).fontSize.split('px')[0])-4) + 'px'))
+    //
+    // })
+    // const computedStyle = getComputedStyle(contactstitle[0]);
+    // const contactsp = document.querySelectorAll('footer .p-footer')
+    // contactsp.forEach(title => {
+    //     title.style.setProperty('font-size', String(Number(computedStyle.fontSize.split('px')[0])-4)+ 'px')
+    //
+    // })
 
 }
 

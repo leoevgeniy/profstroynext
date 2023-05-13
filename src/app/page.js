@@ -81,19 +81,19 @@ export default function Home() {
                 onHide={() => setModalShow(false)}
             />
             <header className='header'>
-                <div className="container header-line d-flex justify-content-end">
+                <div className="container header-line d-flex justify-content-end ">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                          className="bi bi-telephone-fill h-75 text-black my-auto" viewBox="0 0 16 16">
                         <path fillRule="evenodd"
                               d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
                     </svg>
-                    <span className="my-auto text-black phone">8-984-000-73-73</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                         className="bi bi-telephone-fill h-75 text-black my-auto" viewBox="0 0 16 16">
-                        <path fillRule="evenodd"
-                              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                    </svg>
-                    <span className="my-auto text-black phone">8-960-366-75-83</span>
+                    <a href='tel:8-984-000-73-73' className="text-decoration-none my-auto text-black phone fw-bold">8-984-000-73-73</a>
+                    {/*<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"*/}
+                    {/*     className="bi bi-telephone-fill h-75 text-black my-auto" viewBox="0 0 16 16">*/}
+                    {/*    <path fillRule="evenodd"*/}
+                    {/*          d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>*/}
+                    {/*</svg>*/}
+                    <a href='tel:8-960-366-75-83' className="text-decoration-none my-auto text-black phone fw-bold">8-960-366-75-83</a>
                 </div>
             </header>
 
@@ -110,10 +110,10 @@ export default function Home() {
                     <p className="no-avans text-end">Работаем <strong>БЕЗ ПРЕДОПЛАТЫ И АВАНСА</strong><br/>
                         Выезд мастера на замер <strong>БЕСПЛАТНО</strong>
                     </p>
-                    <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" style={{zIndex: '1001'}} className="callme ms-auto"
-                            onClick={() => setModalShow(true)}>
-                        Отправить заявку
-                    </button>
+                    {/*<button data-bs-toggle="modal" data-bs-target="#staticBackdrop" style={{zIndex: '1001'}} className="callme ms-auto"*/}
+                    {/*        onClick={() => setModalShow(true)}>*/}
+                    {/*    Отправить заявку*/}
+                    {/*</button>*/}
                 </div>
                 <div className="sections">
                     <p className="text-uppercase"> все виды работ <strong className="text-decoration-underline">из
@@ -198,19 +198,19 @@ export default function Home() {
                    style={{fontStyle: 'italic', fontSize: '30px', fontWeight: '700', color: '#264465'}}>НАШИ РАБОТЫ</p>
                 <div className="my-jobs ratio ratio-16x9 container"></div>
             </div>
-            <div className="request w-100 d-block container text-center text-white"
+            <div className="request w-100 d-block container text-center text-white my-2 py-4"
                  style={{backgroundColor: '#264465'}}>
-                <p className="pt-5 skidka"> Оставьте заявку и
+                <p className="skidka"> Звоните и
                     получите скидку</p>
                 <p className="mt-3 skidka"> 10% на услуги</p>
-                <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" className="my-3 skidka-button"
-                        onClick={() => setModalShow(true)}>Отправить
-                    заявку
-                </button>
+                {/*<button data-bs-toggle="modal" data-bs-target="#staticBackdrop" className="my-3 skidka-button"*/}
+                {/*        onClick={() => setModalShow(true)}>Отправить*/}
+                {/*    заявку*/}
+                {/*</button>*/}
 
             </div>
             <div className="otziv d-block container text-center">
-                <p className="pt-3">Отзывы
+                <p className="pt-3 fs-lg-1 fs-3">Отзывы
                     наших
                     заказчиков</p>
                 <Row className="otziv-array m-5">
@@ -240,8 +240,8 @@ export default function Home() {
 
             </div>
             <footer className="d-block container text-start w-100 footer">
-                <p className="mx-5 pt-3 text-white title">ВСЕГДА ОТКРЫТЫ К СОТРУДНИЧЕСТВУ</p>
-                <div className="d-flex justify-content-around constacts">
+                <p className="pt-3 text-white title">ВСЕГДА ОТКРЫТЫ К СОТРУДНИЧЕСТВУ</p>
+                <div className="pb-3 d-flex justify-content-around constacts">
                     <div className="text-white lh-1 text-center">
                         <p className="p-title"><strong>Телефоны</strong></p>
                         <div className="d-flex justify-content-center align-content-center">
@@ -250,16 +250,16 @@ export default function Home() {
                                 <path fillRule="evenodd"
                                       d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
                             </svg>
-                            <div>
-                                <p className="p-footer">8-984-000-73-73</p>
-                                <p className=" p-footer">8-960-366-75-83</p>
+                            <div className='d-flex flex-column '>
+                                <a href='tel:8-984-000-73-73' className="text-decoration-none p-footer text-white mb-2">8-984-000-73-73</a>
+                                <a href='tel:8-960-366-75-83' className="text-decoration-none text-white p-footer">8-960-366-75-83</a>
                             </div>
                         </div>
                     </div>
-                    <div className="text-white lh-1 text-center">
+                    <div className="text-white lh-1 text-center mx-2">
                         <p className="p-title"><strong>E-MAIL</strong></p>
                         <div className="d-flex justify-content-center align-content-center">
-                            <p className="p-footer">support@profstroy73.ru</p>
+                            <a href='mailto:support@profstroy73.ru' className="text-decoration-none text-white p-footer">support@profstroy73.ru</a>
                         </div>
                     </div>
                     <div className="text-white lh-1 text-center d-none d-md-block ">
@@ -272,29 +272,6 @@ export default function Home() {
 
                 </div>
             </footer>
-            <div className="modal fade" id="staticBackdrop" tabIndex="-1" aria-labelledby="callbackLabel"
-                 aria-hidden="true">
-                <div className="modal-dialog modal-dialog-centered">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Оставьте свои данные и мы перезвоним</h5>
-                            <button type="button" className="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Закрыть"></button>
-                        </div>
-                        <div className="modal-body">
-                            <input id="number" type="numric" placeholder="+70000000000"/>
-                            <input id="name" type="text" placeholder="name"/>
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-primary" id="callme"
-                                    data-bs-dismiss="modal">Перезвонить
-                                мне
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </>
     )
 }
