@@ -7,7 +7,7 @@ import 'setimmediate'
 // import fontsize from "@/js";
 // import {toggle} from '@/js/otzivarr'
 import Image from "next/image";
-import ExportedImage  from "next-image-export-optimizer";
+import ExportedImage from "next-image-export-optimizer";
 import brigadatitle from '@/images/brigadatitle.jpg'
 import location from '@/images/location.jpg'
 import mainimg from '@/images/mainimg.png'
@@ -80,31 +80,35 @@ export default function Home() {
                 show={modalShow}
                 onHide={() => setModalShow(false)}
             />
-            <header className='header'>
-                <div className="container header-line d-flex justify-content-end ">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                         className="bi bi-telephone-fill h-75 text-black my-auto" viewBox="0 0 16 16">
-                        <path fillRule="evenodd"
-                              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                    </svg>
-                    <a href='tel:8-984-000-73-73' className="text-decoration-none my-auto text-black phone fw-bold">8-984-000-73-73</a>
-                    {/*<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"*/}
-                    {/*     className="bi bi-telephone-fill h-75 text-black my-auto" viewBox="0 0 16 16">*/}
-                    {/*    <path fillRule="evenodd"*/}
-                    {/*          d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>*/}
-                    {/*</svg>*/}
-                    <a href='tel:8-960-366-75-83' className="text-decoration-none my-auto text-black phone fw-bold">8-960-366-75-83</a>
+            <header className='header container px-0 my-auto'>
+                <div className="header-line  d-flex align-items-center justify-content-end">
+                    <div className='text-end'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             className="bi bi-telephone-fill h-75 text-black my-auto" viewBox="0 0 16 16">
+                            <path fillRule="evenodd"
+                                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                        </svg>
+                        <a href='tel:8-984-000-73-73'
+                           className="text-decoration-none my-auto text-black phone fw-bold">8-984-000-73-73</a>
+                        {/*<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"*/}
+                        {/*     className="bi bi-telephone-fill h-75 text-black my-auto" viewBox="0 0 16 16">*/}
+                        {/*    <path fillRule="evenodd"*/}
+                        {/*          d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>*/}
+                        {/*</svg>*/}
+                        <a href='tel:8-960-366-75-83'
+                           className="text-decoration-none my-auto text-black phone fw-bold">8-960-366-75-83</a>
+                    </div>
                 </div>
             </header>
 
             <main className="ratio ratio-1x1 container main">
                 <div className="title d-flex flex-column justify-content-start">
                     <ExportedImage layout='responsive' src={brigadatitle} alt="Стрительная бригада"
-                           className="brigada-title"/>
+                                   className="brigada-title"/>
 
                     <ExportedImage layout='responsive' src={location}
-                           alt="Работаем по Ульяновску и Ульяновской области"
-                           className="location-title"/>
+                                   alt="Работаем по Ульяновску и Ульяновской области"
+                                   className="location-title"/>
 
                     <ExportedImage layout='responsive' src={mainimg} alt="Работаем командой"/>
                     <p className="no-avans text-end">Работаем <strong>БЕЗ ПРЕДОПЛАТЫ И АВАНСА</strong><br/>
@@ -122,7 +126,8 @@ export default function Home() {
                     </p>
                     <div className="d-flex first-line">
                         <div className="item">
-                            <ExportedImage layout='responsive' placeholder="empty" src={bani} className="" alt='Строим бани, хозблоки'/>
+                            <ExportedImage layout='responsive' placeholder="empty" src={bani} className=""
+                                           alt='Строим бани, хозблоки'/>
                             <div className="info d-flex">
                                 <div className="pixel my-auto"></div>
                                 <span>БАНИ</span>
@@ -133,8 +138,9 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="item">
-                            <ExportedImage layout='responsive' placeholder="empty" src={besedki} alt='Строим беседки, веранды, террасы'
-                                   className=""/>
+                            <ExportedImage layout='responsive' placeholder="empty" src={besedki}
+                                           alt='Строим беседки, веранды, террасы'
+                                           className=""/>
                             <div className="info d-flex">
                                 <div className="pixel my-auto"></div>
                                 <span>БЕСЕДКИ</span>
@@ -152,7 +158,8 @@ export default function Home() {
                     </div>
                     <div className="d-flex second-line ">
                         <div className="item">
-                            <ExportedImage layout='responsive' placeholder="empty" src={zabor} alt='Строим заборы, перегородки' className="bani"/>
+                            <ExportedImage layout='responsive' placeholder="empty" src={zabor}
+                                           alt='Строим заборы, перегородки' className="bani"/>
                             <div className="info d-flex">
                                 <div className="pixel my-auto"></div>
                                 <span>ЗАБОРЫ</span>
@@ -163,8 +170,9 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="item">
-                            <ExportedImage layout='responsive' placeholder="empty" src={roof} alt='устанавливаем сайдинг, крыши, окна'
-                                   className="bani"/>
+                            <ExportedImage layout='responsive' placeholder="empty" src={roof}
+                                           alt='устанавливаем сайдинг, крыши, окна'
+                                           className="bani"/>
                             <div className="info d-flex">
                                 <div className="pixel my-auto"></div>
                                 <span>САЙДИНГ</span>
@@ -179,7 +187,8 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="item">
-                            <ExportedImage layout='responsive' placeholder="empty" src={road} alt='Дорожки, стяжки' className=""/>
+                            <ExportedImage layout='responsive' placeholder="empty" src={road} alt='Дорожки, стяжки'
+                                           className=""/>
                             <div className="info d-flex">
                                 <div className="pixel my-auto"></div>
                                 <span>ДОРОЖКИ</span>
@@ -251,15 +260,18 @@ export default function Home() {
                                       d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
                             </svg>
                             <div className='d-flex flex-column '>
-                                <a href='tel:8-984-000-73-73' className="text-decoration-none p-footer text-white mb-2">8-984-000-73-73</a>
-                                <a href='tel:8-960-366-75-83' className="text-decoration-none text-white p-footer">8-960-366-75-83</a>
+                                <a href='tel:8-984-000-73-73'
+                                   className="text-decoration-none p-footer text-white mb-2">8-984-000-73-73</a>
+                                <a href='tel:8-960-366-75-83'
+                                   className="text-decoration-none text-white p-footer">8-960-366-75-83</a>
                             </div>
                         </div>
                     </div>
                     <div className="text-white lh-1 text-center mx-2">
                         <p className="p-title"><strong>E-MAIL</strong></p>
                         <div className="d-flex justify-content-center align-content-center">
-                            <a href='mailto:support@profstroy73.ru' className="text-decoration-none text-white p-footer">support@profstroy73.ru</a>
+                            <a href='mailto:support@profstroy73.ru'
+                               className="text-decoration-none text-white p-footer">support@profstroy73.ru</a>
                         </div>
                     </div>
                     <div className="text-white lh-1 text-center d-none d-md-block ">
@@ -275,7 +287,8 @@ export default function Home() {
         </>
     )
 }
+
 export function getStaticProps() {
     fs
-    return { props: { msg: 'hello world' } }
+    return {props: {msg: 'hello world'}}
 }

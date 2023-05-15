@@ -8,6 +8,24 @@
     background-color: #60B487;
   }
 }
+@media (min-width: 100px) {
+  .header {}
+    a {
+      font-size: 8px;
+    }
+}
+@media (min-width: 200px) {
+  .header {}
+    a {
+      font-size: 12px;
+    }
+}
+@media (min-width: 572px) {
+  .header {}
+    a {
+      font-size: 18px;
+    }
+}
 .my-jobs {
   width: 100%;
   background-size: cover;

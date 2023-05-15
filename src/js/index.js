@@ -10,7 +10,7 @@ export default function fontsize() {
     // headerLine.style.setProperty('height', String(header.offsetWidth * 0.03) + 'px')
     phone.forEach(pho => {
         const computedStyle = getComputedStyle(pho);
-        const fs = pho.parentElement.offsetWidth > 719 ? pho.parentElement.offsetHeight * 0.7 : pho.parentElement.offsetHeight * 0.7
+        // const fs = pho.parentElement.offsetWidth > 719 ? pho.parentElement.offsetWidth * 0.04 : pho.parentElement.offsetWidth * 0.03
         // pho.style.setProperty('font-size', String(fs + 'px'))
         pho.style.setProperty('padding-left', String(pho.parentElement.offsetWidth * 0.02 + 'px'))
         pho.style.setProperty('padding-right', String(pho.parentElement.offsetWidth * 0.02 + 'px'))
