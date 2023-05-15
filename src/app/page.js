@@ -20,6 +20,7 @@ import road from '@/images/road.jpg'
 import {useEffect, useState} from "react";
 import fontsize from "@/js/index";
 import {Col, Row} from "react-bootstrap";
+import Head from "next/head";
 
 export default function Home() {
     const size = useWindowSize();
@@ -76,6 +77,29 @@ export default function Home() {
 
     return (
         <>
+            <Head>
+                <title>
+                    Строительная бригада
+                </title>
+                <meta name='description' content='Все виды строительных и ремонтных работ в г. Ульяновске и Ульяновской облшасти'/>
+                <meta name="keywords" content="ремонт квартир домов строительство строительная бригада Ульяновск Ульяновская область" />
+                <meta property='og:title' content='Строительная бригада'/>
+                <meta property='og:description' content='Все виды строительных и ремонтных работ в г. Ульяновске и Ульяновской облшасти'/>
+                <meta property='og:image' content='./logo.svg' key="ogimage"/>
+                <meta
+                    property="og:site_name"
+                    content="profstroy73.ru"
+                    key="ogsitename"
+                />
+                <meta
+                    property="og:url"
+                    content="https://profstroy73.ru/"
+                    key="ogurl"
+                />
+                <meta property="og:type" content="article" key="ogtype" />
+                <link rel="shortcut icon" href="./logo.ico" />
+
+            </Head>
             <MyVerticallyCenteredModal
                 show={modalShow}
                 onHide={() => setModalShow(false)}
